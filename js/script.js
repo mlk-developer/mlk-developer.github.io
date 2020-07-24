@@ -22,6 +22,9 @@ $("h5").css({
 $("img").css({
     "opacity": 0
 })
+$("h6").css({
+    "opacity": 0
+})
 
 
 $("#title").animate({
@@ -55,6 +58,11 @@ $("#title").animate({
             opacity: "1.0",
             marginLeft: "+=100",
         }, 500);
+        $("h6").animate(
+        {
+            opacity: "1.0",
+            marginLeft: "+=100",
+        }, 800);
 });
 
 $("#btnDark").click(function () {
