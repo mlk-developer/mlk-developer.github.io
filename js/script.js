@@ -1,5 +1,5 @@
 $("#sidebar").css({
-    "zIndex":10
+    "zIndex": 10
 })
 
 $("#title").css({
@@ -75,6 +75,13 @@ $("#btnDark").click(function () {
     $("p").css('color', 'rgba(200,200,200)')
     $("h1").css('color', 'rgba(200,200,200)')
     $("h3").css('color', 'rgba(200,200,200)')
+    $("#btnDark").hide();
+    $("#btnLight").css({
+        'background': "white",
+        'color' : "black"
+    });
+
+    $("#btnLight").show();
 
 })
 
@@ -84,5 +91,7 @@ $("#btnLight").click(function () {
     $("p").css('color', '#797979')
     $("h1").css('color', '#797979')
     $("h3").css('color', '#797979')
+    $("#btnDark").show();
+    $("#btnLight").hide();
 
 })
