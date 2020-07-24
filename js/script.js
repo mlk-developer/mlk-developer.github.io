@@ -61,7 +61,6 @@ $("#title").animate({
         $("h6").animate(
         {
             opacity: "1.0",
-            marginLeft: "+=100",
         }, 800);
 });
 
