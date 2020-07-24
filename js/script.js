@@ -1,10 +1,14 @@
+$("#sidebar").css({
+    "zIndex":10
+})
+
 $("#title").css({
     "opacity": "0",
     "marginLeft": "-=100"
 })
 $("p").css({
     "opacity": "0",
-    "marginLeft": "-=100"
+    "marginLeft": "-=100",
 })
 $("h3").css({
     "opacity": "0",
@@ -58,7 +62,8 @@ $("#title").animate({
             opacity: "1.0",
             marginLeft: "+=100",
         }, 500);
-        $("h6").animate(
+
+    $("h6").animate(
         {
             opacity: "1.0",
         }, 800);
