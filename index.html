@@ -24,6 +24,10 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet">
     <script src="lib/chart-master/Chart.js"></script>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+            rel="stylesheet"
+    />
 
 </head>
 
@@ -34,18 +38,19 @@
             <div class="fa fa-bars tooltips" data-original-title="Parcourir le site" data-placement="right"></div>
         </div>
         <a class="logo" href="index.html"><b>mlk<span>developer</span></b></a>
-            <div class="top-menu">
-                <ul class="nav pull-right top-menu">
-                    <li>
-                        <button style="display: none" class="luminosity" id="btnLight"><span class="fa fa-adjust">&nbsp;</span>Mode jour
-                        </button>
-                    </li>
-                    <li>
-                        <button class="luminosity" id="btnDark"><span class="fas fa-adjust">&nbsp;</span>Mode nuit
-                        </button>
-                    </li>
-                </ul>
-            </div>
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <button class="luminosity" id="btnLight" style="display: none"><span
+                            class="fa fa-adjust">&nbsp;</span>Mode jour
+                    </button>
+                </li>
+                <li>
+                    <button class="luminosity" id="btnDark"><span class="fas fa-adjust">&nbsp;</span>Mode nuit
+                    </button>
+                </li>
+            </ul>
+        </div>
     </header>
 
 
@@ -59,7 +64,7 @@
                 <h5 class="centered">Mohamed-Loqmane KAJEIOU</h5>
                 <hr>
                 <h5 class="centered">Statut actuel :</h5>
-                <h6 class="centered">
+                <h6 class="centered p-1">
                     Stagiaire développeur fullstack chez <a href="https://www.qotid.com/">QOTID</a><br>
                     En recherche d'alternance
                 </h6>
@@ -103,7 +108,7 @@
 
 <section id="main-content">
     <section class="wrapper">
-        <div class="row p-5">
+        <div class="row p-5 text-justify">
             <div class="col-lg-12 main-chart">
                 <h1 class="centered m-5" id="title">
                     Mon profil

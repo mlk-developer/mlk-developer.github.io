@@ -1,67 +1,24 @@
-$("#sidebar").css({
-    "zIndex": 10
-})
-
-$("#title").css({
-    "opacity": "0",
-    "marginLeft": "-=100"
-})
-$("p").css({
-    "opacity": "0",
-    "marginLeft": "-=100",
-})
-$("h3").css({
-    "opacity": "0",
-    "marginLeft": "-=100"
-})
-$("a").css({
-    "opacity": "0",
-    "marginLeft": "-=100"
-})
-$("h5").css({
-    "opacity": "0",
+$("#title, p, h3, a, h5, img").css({
+    "opacity": 0,
     "marginLeft": "-=100"
 })
 
-$("img").css({
+$("img, h6").css({
     "opacity": 0
 })
-$("h6").css({
-    "opacity": 0
-})
+
 
 
 $("#title").animate({
     marginLeft: "+=100",
     opacity: 1,
 }, 1000, function () {
-    $("h3").animate(
+    $("h3, p, a, h5, img").animate(
         {
             opacity: "1.0",
             marginLeft: "+=100",
         }, 500
     );
-    $("p").animate(
-        {
-            opacity: "1.0",
-            marginLeft: "+=100",
-        }, 500, function () {
-            $("img").animate({
-                opacity: "1.0"
-            }, 1000)
-        }
-    );
-    $("a").animate(
-        {
-            opacity: "1.0",
-            marginLeft: "+=100",
-        }, 500);
-
-    $("h5").animate(
-        {
-            opacity: "1.0",
-            marginLeft: "+=100",
-        }, 500);
 
     $("h6").animate(
         {
@@ -71,16 +28,14 @@ $("#title").animate({
 
 $("#btnDark").click(function () {
     $("body").css('background', 'rgb(0,0,0)');
+    $("body").css('background-image', 'url("")');
 
-    $("p").css('color', 'rgba(200,200,200)')
-    $("h1").css('color', 'rgba(200,200,200)')
-    $("h3").css('color', 'rgba(200,200,200)')
+    $("p,h1,h3").css('color', 'rgb(200,200,200)')
     $("#btnDark").hide();
     $("#btnLight").css({
         'background': "white",
-        'color' : "black"
+        'color': "black"
     });
-
     $("#btnLight").show();
 
 })
@@ -88,9 +43,8 @@ $("#btnDark").click(function () {
 $("#btnLight").click(function () {
     $("body").css('background', '#eaeaea');
 
-    $("p").css('color', '#797979')
-    $("h1").css('color', '#797979')
-    $("h3").css('color', '#797979')
+    $("p, h1, h3").css('color', '#797979')
+
     $("#btnDark").show();
     $("#btnLight").hide();
 
