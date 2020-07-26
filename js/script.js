@@ -19,7 +19,7 @@ $("#title, p, h3, a, h5, img").css({
     "marginLeft": "-=100"
 })
 
-$("img, h6").css({
+$("img, h6, table").css({
     "opacity": 0
 })
 
@@ -32,7 +32,11 @@ $("#title").animate({
         {
             opacity: "1.0",
             marginLeft: "+=100",
-        }, 500
+        }, 500, function () {
+            $("table").animate({
+                opacity: 1
+            }, 1000)
+        }
     );
 
     $("h6").animate(
@@ -111,7 +115,7 @@ const expertise = {
         "subject":
             "&diams; PHP natif / PHP orientée objet " + "<br>" + "&diams; Utilisation de Laravel pour réaliser un CRUD (autodidacte)",
         "description":
-            "-Gestion d'un BACK-OFFICE" + "<br>" +
+            "-Gestion d'un BACK-OFFICE de A à Z" + "<br>" +
             "-Utilisation d'API stripe" + "<br>" +
             "-Création d'une API" + "<br>" +
             "-Communication avec la base de données" + "<br>"
@@ -135,7 +139,8 @@ const expertise = {
             "&diams; C",
         "description":
             "-Construction de programmes basiques" + "<br>" +
-            "-Utilisation de tableaux / pointeurs / prototypes / fonctions" + "<br>" +
+            "-Utilisation de tableaux / pointeurs / prototypes / fonctions / structures" + "<br>" +
+            "-Maitrise des chaines de caractères et des systèmes de fichiers " + "<br>" +
             "-Utilisation de la librairie GTK pour une interface graphique" + "<br>" +
             "-Utilisation de la librairie MySQL pour communiquer avec la base de données" + "<br>" +
             "-Création d'un robot en C++ avec l'implémentation SOIL"
@@ -161,13 +166,12 @@ const expertise = {
     },
 }
 //
-var i = 0;
-for (var key in expertise) {
-    var value = "<tr>" +
+for (var i in expertise) {
+    var content = "<tr>" +
         "<td>" + expertise[i]['subject'] + "</td>" +
         "<td>" + expertise[i]['description'] + "</td>" +
         "</tr>";
 
-    $("#langages").append(value)
+    $("#langages").append(content)
     i++;
 }
