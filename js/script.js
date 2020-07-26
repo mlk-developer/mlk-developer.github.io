@@ -134,11 +134,30 @@ const expertise = {
         "subject":
             "&diams; C",
         "description":
-                "-Construction de programmes basiques"+"<br>"+
-                "-Utilisation de tableaux / pointeurs / prototypes / fonctions"+"<br>"+
-                "-Utilisation de la librairie GTK pour une interface graphique"+"<br>"+
-                "-Utilisation de la librairie MySQL pour communiquer avec la base de données"+"<br>"+
-                "-Création d'un robot en C++ avec l'implémentation SOIL"
+            "-Construction de programmes basiques" + "<br>" +
+            "-Utilisation de tableaux / pointeurs / prototypes / fonctions" + "<br>" +
+            "-Utilisation de la librairie GTK pour une interface graphique" + "<br>" +
+            "-Utilisation de la librairie MySQL pour communiquer avec la base de données" + "<br>" +
+            "-Création d'un robot en C++ avec l'implémentation SOIL"
+    },
+    4: {
+        "subject":
+            "&diams; Shell",
+        "description":
+            "-Construction de programmes basiques" + "<br>" +
+            "-Utilisation de fonctions, de tableaux ..."
+    },
+    5: {
+        "subject":
+            "&diams; Python",
+        "description":
+            "-Construction de programmes basiques"
+    },
+    6: {
+        "subject":
+            "&diams; Java orienté objet",
+        "description":
+            "-Construction de programmes basiques"
     },
 }
 //
