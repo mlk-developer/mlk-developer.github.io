@@ -78,11 +78,11 @@ $("#alternanceInfo").on("click", function () {
 });
 
 //Récupération des données en ajax
-$.get("data_expertise.php", function (data) {
-
-    $("#langages").html(data);
-
-});
+// $.get("data_expertise.php", function (data) {
+//
+//     $("#langages").html(data);
+//
+// });
 
 function nuit() {
     $("body").css('background', '#2f3640');
@@ -104,4 +104,51 @@ function jour() {
     $("#btnDark").show();
     $("#btnLight").hide();
     document.cookie = "mode=FALSE";
+}
+
+const expertise = {
+    0: {
+        "subject":
+            "&diams; PHP natif / PHP orientée objet " + "<br>" + "&diams; Utilisation de Laravel pour réaliser un CRUD (autodidacte)",
+        "description":
+            "-Gestion d'un BACK-OFFICE" + "<br>" +
+            "-Utilisation d'API stripe" + "<br>" +
+            "-Création d'une API" + "<br>" +
+            "-Communication avec la base de données" + "<br>"
+    },
+    1: {
+        "subject":
+            "&diams; JS" + "<br>" +
+            "&diams; jQuery",
+        "description":
+            "-Script permettant d'avoir un front dynamique avec AJAX et DOM" + "<br>"
+    },
+    2: {
+        "subject":
+            "&diams; HTML / CSS (Bootstrap)",
+        "description":
+            "-Création de page designer de A à Z" + "<br>" +
+            "-Utilisation de templates"
+    },
+    3: {
+        "subject":
+            "&diams; C",
+        "description":
+                "-Construction de programmes basiques"+"<br>"+
+                "-Utilisation de tableaux / pointeurs / prototypes / fonctions"+"<br>"+
+                "-Utilisation de la librairie GTK pour une interface graphique"+"<br>"+
+                "-Utilisation de la librairie MySQL pour communiquer avec la base de données"+"<br>"+
+                "-Création d'un robot en C++ avec l'implémentation SOIL"
+    },
+}
+//
+var i = 0;
+for (var key in expertise) {
+    var value = "<tr>" +
+        "<td>" + expertise[i]['subject'] + "</td>" +
+        "<td>" + expertise[i]['description'] + "</td>" +
+        "</tr>";
+
+    $("#langages").append(value)
+    i++;
 }
