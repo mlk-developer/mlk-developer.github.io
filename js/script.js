@@ -14,7 +14,7 @@ var mode = readCookie("mode");
 mode === "FALSE" ? jour() : nuit();
 
 
-$("#title, p, h3, a, h5, img").css({
+$("#title, p, h3, a, h5, img, li").css({
     "opacity": 0,
     "marginLeft": "-=100"
 })
@@ -28,7 +28,7 @@ $("#title").animate({
     marginLeft: "+=100",
     opacity: 1,
 }, 1000, function () {
-    $("h3, p, a, h5, img").animate(
+    $("h3, p, a, h5, img, li").animate(
         {
             opacity: "1.0",
             marginLeft: "+=100",
@@ -49,7 +49,7 @@ $("#title").animate({
 $("#btnLight").click(function () {
 
     $("body").css('background', '#eaeaea');
-    $("p, h1, h3, table").css('color', '#797979')
+    $("p, h1, h3, table, li").css('color', '#797979')
 
     $("#btnDark").show();
     $("#btnLight").hide();
@@ -59,7 +59,7 @@ $("#btnLight").click(function () {
 $("#btnDark").click(function () {
     $("body").css('background', '#2f3640');
 
-    $("p,h1,h3, table").css('color', 'rgb(200,200,200)')
+    $("p,h1,h3, table, li").css('color', 'rgb(200,200,200)')
     $("#btnDark").hide();
     $("#btnLight").css({
         'background': "white",
@@ -91,7 +91,7 @@ $("#alternanceInfo").on("click", function () {
 function nuit() {
     $("body").css('background', '#2f3640');
 
-    $("p,h1,h3, table").css('color', 'rgb(200,200,200)')
+    $("p,h1,h3, table, li").css('color', 'rgb(200,200,200)')
     $("#btnDark").hide();
     $("#btnLight").css({
         'background': "white",
@@ -103,7 +103,7 @@ function nuit() {
 
 function jour() {
     $("body").css('background', '#eaeaea');
-    $("p, h1, h3, table").css('color', '#797979')
+    $("p, h1, h3, table, li").css('color', '#797979')
 
     $("#btnDark").show();
     $("#btnLight").hide();
@@ -113,12 +113,11 @@ function jour() {
 const expertise = {
     0: {
         "subject":
-            "&diams; PHP natif / PHP orientée objet " + "<br>" + "&diams; Utilisation de Laravel pour réaliser un CRUD (autodidacte)",
+            "&diams; PHP procédural / PHP orienté objet " + "<br>" + "&diams; Utilisation de Laravel pour réaliser un CRUD (autodidacte)",
         "description":
             "-Gestion d'un BACK-OFFICE de A à Z" + "<br>" +
             "-Utilisation d'API stripe" + "<br>" +
-            "-Création d'une API" + "<br>" +
-            "-Communication avec la base de données" + "<br>"
+            "-Création d'une API" + "<br>"
     },
     1: {
         "subject":
@@ -131,10 +130,18 @@ const expertise = {
         "subject":
             "&diams; HTML / CSS (Bootstrap)",
         "description":
-            "-Création de page designer de A à Z" + "<br>" +
+            "-Conception de pages de A à Z" + "<br>" +
             "-Utilisation de templates"
     },
     3: {
+        "subject":
+            "&diams; SQL",
+        "description":
+            "-Conception de bases de données" + "<br>" +
+            "-Communication avec la base de données avec le langage SQL depuis MySQL ou Oracle " +
+            "(PostgreSQL est un SGBD qui sera vu au cours de la 3e année)"
+    },
+    4: {
         "subject":
             "&diams; C",
         "description":
@@ -145,20 +152,20 @@ const expertise = {
             "-Utilisation de la librairie MySQL pour communiquer avec la base de données" + "<br>" +
             "-Création d'un robot en C++ avec l'implémentation SOIL"
     },
-    4: {
+    5: {
         "subject":
             "&diams; Shell",
         "description":
             "-Construction de programmes basiques" + "<br>" +
             "-Utilisation de fonctions, de tableaux ..."
     },
-    5: {
+    6: {
         "subject":
             "&diams; Python",
         "description":
             "-Construction de programmes basiques"
     },
-    6: {
+    7: {
         "subject":
             "&diams; Java orienté objet",
         "description":
@@ -173,5 +180,4 @@ for (var i in expertise) {
         "</tr>";
 
     $("#langages").append(content)
-    i++;
 }
