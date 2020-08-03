@@ -20,7 +20,7 @@ body {
     background-color: #eaeaea;
     /*background-image: url("../img/bg-body2.jpg")*/
     background-size: cover;
-    font-family: "Lucida Console", Monaco, monospace;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     padding: 0px !important;
     margin: 0px !important;
     font-size: 13px;

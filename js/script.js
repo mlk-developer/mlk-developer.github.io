@@ -14,7 +14,7 @@ var mode = readCookie("mode");
 mode === "FALSE" ? jour() : nuit();
 
 
-$("#title, p, h3, a, h5, img, li").css({
+$("#title, p, h3, a, h5, img, li, h4").css({
     "opacity": 0,
     "marginLeft": "-=100"
 })
@@ -28,7 +28,7 @@ $("#title").animate({
     marginLeft: "+=100",
     opacity: 1,
 }, 1000, function () {
-    $("h3, p, a, h5, img, li").animate(
+    $("h3, p, a, h5, img, li, h4").animate(
         {
             opacity: "1.0",
             marginLeft: "+=100",
@@ -49,7 +49,7 @@ $("#title").animate({
 $("#btnLight").click(function () {
 
     $("body").css('background', '#eaeaea');
-    $("p, h1, h3, table, li").css('color', '#797979')
+    $("p, h1, h3, table, li, h4").css('color', '#000000')
 
     $("#btnDark").show();
     $("#btnLight").hide();
@@ -59,7 +59,7 @@ $("#btnLight").click(function () {
 $("#btnDark").click(function () {
     $("body").css('background', '#2f3640');
 
-    $("p,h1,h3, table, li").css('color', 'rgb(200,200,200)')
+    $("p,h1,h3, table, li, h4").css('color', 'rgb(200,200,200)')
     $("#btnDark").hide();
     $("#btnLight").css({
         'background': "white",
@@ -91,7 +91,7 @@ $("#alternanceInfo").on("click", function () {
 function nuit() {
     $("body").css('background', '#2f3640');
 
-    $("p,h1,h3, table, li").css('color', 'rgb(200,200,200)')
+    $("p,h1,h3, table, li, h4").css('color', 'rgb(200,200,200)')
     $("#btnDark").hide();
     $("#btnLight").css({
         'background': "white",
@@ -103,7 +103,7 @@ function nuit() {
 
 function jour() {
     $("body").css('background', '#eaeaea');
-    $("p, h1, h3, table, li").css('color', '#797979')
+    $("p, h1, h3, table, li, h4").css('color', '#000000')
 
     $("#btnDark").show();
     $("#btnLight").hide();
