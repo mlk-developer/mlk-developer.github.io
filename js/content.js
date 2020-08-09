@@ -164,7 +164,8 @@ const p_pa1 = "<span class=' text-justify quote'>" +
 
     "-Configuration de A à Z d'un vps OVH" +"<br>" +
     "-Configuration d'un certificat SSL" +"<br>" +
-    "-Configuration du SGBD MySQL" +"<br>" +
+    "-Installation du serveur HTTP apache 2" +"<br>" +
+    "-Installation du SGBD MySQL" +"<br>" +
     "-Installation de la librairie 'php-gd' afin d'afficher dynamiquement un captcha dans le formulaire d'inscription" +"<br>"
 
 
