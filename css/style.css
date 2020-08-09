@@ -23,12 +23,18 @@ body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     padding: 0px !important;
     margin: 0px !important;
-    font-size: 13px;
 }
 
-.font-georgia {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+
+.quote{
+    font-style: oblique;
 }
+
+.exp_img{
+    transition: transform .5s;
+}
+
+
 
 /*p, h3, h1{*/
 /*    color : rgb(230, 230, 230);*/
