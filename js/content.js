@@ -14,14 +14,14 @@ const expertise = {
         "description":
             "-Script permettant d'avoir un front dynamique avec AJAX et DOM" + "<br>"
     },
-    2: {
+    3: {
         "subject":
             "&diams; HTML / CSS (Bootstrap)",
         "description":
             "-Conception de pages de A à Z" + "<br>" +
             "-Utilisation de templates"
     },
-    3: {
+    4: {
         "subject":
             "&diams; SQL",
         "description":
@@ -29,7 +29,7 @@ const expertise = {
             "-Communication avec la base de données avec le langage SQL depuis MySQL ou Oracle " +
             "(PostgreSQL est un SGBD qui sera vu au cours de la 3e année)"
     },
-    4: {
+    5: {
         "subject":
             "&diams; C",
         "description":
@@ -40,24 +40,29 @@ const expertise = {
             "-Utilisation de la librairie MySQL pour communiquer avec la base de données" + "<br>" +
             "-Création d'un robot en C++ avec l'implémentation SOIL"
     },
-    5: {
+    6: {
         "subject":
             "&diams; Shell",
         "description":
             "-Construction de programmes basiques" + "<br>" +
             "-Utilisation de fonctions, de tableaux ..."
     },
-    6: {
+    7: {
         "subject":
             "&diams; Python",
         "description":
             "-Construction de programmes basiques"
     },
-    7: {
+    2: {
         "subject":
             "&diams; Java orienté objet",
         "description":
-            "-Construction de programmes basiques"
+            "-Construction de programmes basiques" + "<br>"+
+            "-Utilisation des collections (arrayList, Set)" + "<br>"+
+            "-Utilisation de classes abstraites/interfaces" + "<br>"+
+            "-Maîtrise de la structure des classes (super-classe, sous-classe etc...)" + "<br>"+
+            "-Création d'une application avec une interface graphique pour que l'administrateur gère les prestataires " +
+            "dans une base de données"
     },
 }
 //
@@ -167,9 +172,5 @@ const p_pa1 = "<span class=' text-justify quote'>" +
     "-Installation du serveur HTTP apache 2" +"<br>" +
     "-Installation du SGBD MySQL" +"<br>" +
     "-Installation de la librairie 'php-gd' afin d'afficher dynamiquement un captcha dans le formulaire d'inscription" +"<br>"
-
-
-
-
 $("#p_pa1").append(p_pa1).addClass("text-justify");
 
